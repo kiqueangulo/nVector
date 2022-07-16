@@ -1,2 +1,2 @@
-# nVector
-nVector is a program to manage inventory in any business level.
+# nVectory
+nVectory is a program to manage inventory in any business level.
