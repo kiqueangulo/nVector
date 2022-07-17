@@ -7,10 +7,13 @@ import SaveButton from "./SaveButton"
 function Navbar() {
 	return (
 		<div>
-            <MenuIcon/>
-            <Logo/>
+            <header>
+                <MenuIcon/>
+                <Logo/>
+                <SaveButton/>
+            </header>
 			<SectionList/>
-			<SaveButton/>
+			
 		</div>
 	)
 }

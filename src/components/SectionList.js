@@ -1,9 +1,13 @@
 import React from "react";
-
-function sectionLinks(){
-	
+const sectionArray = ["section1", "section2", "section3", "section4", "section5"]
+function sectionButtons(){
+	let sectionButtons = []
+	for(let i in sectionArray){
+		sectionButtons.push(<button>{sectionArray[i]}</button>)
+	}
 	return(
-		<div>sectionlinks</div>
+		// <div>sectionButtons</div>
+		sectionButtons
 	)
 }
 
@@ -11,7 +15,7 @@ function sectionLinks(){
 function SectionList() {
 	return (
 		<div>
-           {sectionLinks()}
+           {sectionButtons()}
 		</div>
 	)
 }
