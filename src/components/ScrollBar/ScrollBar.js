@@ -11,14 +11,7 @@ function ScrollBar() {
             <div className="section-item">Section 4</div>
             <div className="section-item">Section 5</div>
             <div className="section-item">Section 5</div>
-            <div className="section-item">Section 7</div>
-            <div className="section-item">Section 1</div>
-            <div className="section-item">Section 2</div>
-            <div className="section-item">Section 3</div>
-            <div className="section-item">Section 4</div>
-            <div className="section-item">Section 5</div>
-            <div className="section-item">Section 5</div>
-            <div className="section-item">Section 7</div>
+            
         </div>
     );
 };
