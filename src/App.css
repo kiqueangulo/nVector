@@ -66,5 +66,10 @@
   /* background-color: blue; */
 }
 .sectionButtons{
-  margin:.2em;
+  margin: .2em;
+}
+.headerContainer{
+  border-style: 2px dotted blue;
+  padding-top: 1em;
+  align-items: center;
 }

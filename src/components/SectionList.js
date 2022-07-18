@@ -5,7 +5,8 @@ const sectionArray = ["section1", "section2", "section3", "section4", "section5"
 function sectionButtons(){
 	let sectionButtons = []
 	for(let i in sectionArray){
-		sectionButtons.push(<button className="sectionButtons">{sectionArray[i]}</button>)
+		let elem=sectionArray[i]
+		sectionButtons.push(<button className="sectionButtons" value={elem} key={elem}>{elem}</button>)
 	}
 	return sectionButtons
 }
