@@ -1,4 +1,4 @@
-import ScrollBar from './components/ScrollBar';
+import ScrollBar from './components/ScrollBar/ScrollBar.js';
 
 import './App.css';
 
