@@ -1,9 +1,12 @@
+import ScrollBar from './components/ScrollBar';
+
 import './App.css';
 
 function App() {
   return (
     <>
-      <h1>Title</h1>
+    
+      <ScrollBar />
     </>
   );
 }
