@@ -4,7 +4,7 @@ function SaveButton() {
 
 	return (
 		<div>
-            Save Button
+          <button>Save</button>  
 		</div>
 	)
 }

@@ -6,12 +6,12 @@ import SaveButton from "./SaveButton"
 
 function Navbar() {
 	return (
-		<div>
-            <header>
-                <MenuIcon/>
-                <Logo/>
-                <SaveButton/>
-            </header>
+		<div className="headerContainer">
+            <div className="header">
+                <MenuIcon id="menuIcon"/>
+                <Logo id="logo"/>
+                <SaveButton id="saveButton"/>
+            </div>
 			<SectionList/>
 			
 		</div>

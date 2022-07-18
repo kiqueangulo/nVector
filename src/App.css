@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,36 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* -----------NEW CSS-------------- */
+.headerContainer{
+  display: inline;
+  /* position: absolute; */
+  margin: auto;
+  top: 0;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#menuIcon{
+  /* float: left; */
+  left: 0px;
+}
+
+#saveButton{
+  /* float: right; */
+  right: 0px;
+}
+.sectionList{
+  overflow: scroll;
+  /* background-color: blue; */
+}
+.sectionButtons{
+  margin:.2em;
 }

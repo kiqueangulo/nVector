@@ -1,20 +1,19 @@
 import React from "react";
 const sectionArray = ["section1", "section2", "section3", "section4", "section5"]
+
+//Generates dynamic section buttons from array
 function sectionButtons(){
 	let sectionButtons = []
 	for(let i in sectionArray){
-		sectionButtons.push(<button>{sectionArray[i]}</button>)
+		sectionButtons.push(<button className="sectionButtons">{sectionArray[i]}</button>)
 	}
-	return(
-		// <div>sectionButtons</div>
-		sectionButtons
-	)
+	return sectionButtons
 }
 
 
 function SectionList() {
 	return (
-		<div>
+		<div className="sectionList">
            {sectionButtons()}
 		</div>
 	)
