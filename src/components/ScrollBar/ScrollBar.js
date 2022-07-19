@@ -3,15 +3,15 @@ import React from "react";
 import './ScrollBar.css';
 
 function ScrollBar() {
+    const sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5', 'Section 6', 'Section 7'];
+
+    const displaySections = sections.map((section, index) => (
+        <div key={index} className="section-item">{section}</div>
+    ));
+
     return (
         <div className="section-wrapper">
-            <div className="section-item">Section 1</div>
-            <div className="section-item">Section 2</div>
-            <div className="section-item">Section 3</div>
-            <div className="section-item">Section 4</div>
-            <div className="section-item">Section 5</div>
-            <div className="section-item">Section 5</div>
-            
+            {displaySections}
         </div>
     );
 };
