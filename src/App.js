@@ -1,4 +1,4 @@
-import Navbar from './components/NavBar';
+import Header from './components/Header.js';
 import ScrollBar from './components/ScrollBar/ScrollBar.js';
 
 import './App.css';
@@ -6,11 +6,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Header/>
       <ScrollBar />
-      
     </div>
   );
-}
+};
 
 export default App;
