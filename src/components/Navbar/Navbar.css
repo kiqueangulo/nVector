@@ -1,0 +1,77 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu-bars {
+    font-size: 1.7rem;
+}
+.nav-menu {
+    background-color: rgb(219, 219, 203);
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+}
+.nav-menu::before {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    transition: 1000ms;
+}
+.nav-menu.active {
+    left: 0;
+    transition: 500ms;
+}
+.nav-menu.active::before {
+    opacity: 0.2;
+    transition: 400ms;
+}
+.nav-menu-items {
+    width: 100%;
+}
+.navbar-toggle {
+    width: 100%;
+    height: 80px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+}
+.nav-text a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+.user-name {
+    background-color: rgb(175, 175, 151);
+}
+.user-name a {
+    font-size: 25px;
+}
+span {
+    margin-left: 16px;
+}

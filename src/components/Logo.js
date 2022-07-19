@@ -4,9 +4,9 @@ import logoSrc from "../assets/nVentory_logo.png";
 function Logo() {
 
 	return (
-		<div>
-            <img src= {logoSrc} alt="nVentory Logo"/>
-		</div>
+		<>
+    	    <img src= {logoSrc} alt="nVentory Logo"/>
+		</>
 	)
 }
 
