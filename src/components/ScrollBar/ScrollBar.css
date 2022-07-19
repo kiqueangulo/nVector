@@ -1,18 +1,22 @@
 .section-wrapper {
     flex-grow: 1;
     max-height: 60px;
-    border: 1px solid gray;
+    box-shadow: 0px 15px 15px -15px rgb(116, 116, 116);
     display: flex;
     overflow-x: auto;
 }
 .section-item {
     min-width: 90px;
     flex-grow: 1;
-    height: 60px;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     background-color: #ddd;
-    margin-right: 2px;
+    margin: 5px 0px;
+    margin-right: 3px;
+    border-radius: 25px;
+}
+.section-item:nth-child(2n) {
+    background-color: rgb(240, 226, 204);
 }
 @media only screen and (min-width : 992px) {
     .section-wrapper::-webkit-scrollbar {
