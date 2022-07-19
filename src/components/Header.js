@@ -18,9 +18,9 @@ function Header() {
     
 	return (
 		<div style={headerStyle}>
-                <Navbar id="menuIcon"/>
-                <Logo id="logo"/>
-                <SaveButton id="saveButton"/>
+                <Navbar />
+                <Logo />
+                <SaveButton />
 		</div>
 	)
 }
