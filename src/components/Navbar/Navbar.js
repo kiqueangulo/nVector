@@ -14,7 +14,7 @@ function Navbar() {
     const showSidebar = () => setSidebar(!sidebar);
 
     const sidebarOptions = SidebarData.map((item, index) => (
-        <li key={index} className={ item.title === 'User Name' ? `${item.cName} user-name` : (item.title === 'Support' || item.title === 'Log Out') ? `${item.cName} bottom-options` : item.cName }>
+        <li key={index} className={ item.title === 'User Name' ? `${item.cName} user-name` : (item.title === 'Support' || item.title === 'Log Out') ? `${item.cName} bottom-options bottom-${index}` : item.cName }>
             <Link to={item.path}>
                 {item.icon}
                 <span>{item.title}</span>
