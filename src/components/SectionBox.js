@@ -1,14 +1,15 @@
 import React from "react";
 import SubBox from "./SubBox";
 
+import  "./SectionBox.css";
 
 
-function SectionBox() {
-
+function SectionBox(props) {
+    console.log(props.subSections)
 	return (
-		<div>
+		<div className="sectionBody">
             SectionBox
-            <SubBox />
+            <SubBox subSections={props.subSections}/>
 		</div>
 	)
 }

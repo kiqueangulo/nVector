@@ -1,9 +1,39 @@
-*{
-    border-style: 1em dotted rgb(20, 20, 255);
-}
+/* *{
+    border: .1em dotted rgb(20, 20, 255);
+} */
 li {
     list-style: none;
 }
 .itemBox{
-    border-style: 1em dotted blue;
+    border: .1em dashed #E8F9F7;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #fff;
+    padding: .5em;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.itemName{
+    width: 50%;
+    overflow: scroll;
+    border: 1px solid blueviolet;
+    border-radius: 0px 0px 0px 6px;
+}
+.quantField{
+    display: flex;
+    width: 25%;
+    border: 1px solid rgb(107, 226, 43);
+    justify-content: space-between;
+}
+.remove{
+    height: 40%;
+    width: 20%;
+    background-color: #E9C1C1;
+    color: #fff;
+    border-radius: 0px 0px 10px 0px;
+    text-align: center;
+    /* right: 0px; */
+    /* bottom: 0px; */
 }

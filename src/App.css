@@ -7,3 +7,8 @@
   display: flex;
   flex-flow: column nowrap;
 }
+.header{
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+}

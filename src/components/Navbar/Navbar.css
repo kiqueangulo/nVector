@@ -1,7 +1,10 @@
 .navbar {
+    position: sticky;
+    top: 0px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
 }
 .menu-bars {
     font-size: 1.7rem;

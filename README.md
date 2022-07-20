@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-# nVectory
-nVectory is a program to manage inventory in any business level.
+# nVentory
+nVentory is a program to manage inventory in any business level.
 ========
 This is the initial design of the UI.
 

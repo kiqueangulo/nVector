@@ -1,0 +1,10 @@
+.subBox{
+
+    border-radius: 0px 0px 10px 10px;
+    background-color: #E8F9F7;
+    width: 95%;
+    margin: auto;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    overflow: auto;  
+}
