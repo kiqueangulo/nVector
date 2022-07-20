@@ -35,9 +35,43 @@ li {
 }
 .quantField{
     display: flex;
+    flex-direction: row;
     width: 25%;
-    border: 1px solid rgb(107, 226, 43);
+    height: 75%;
+    /* border: 1px solid rgb(107, 226, 43); */
     justify-content: space-between;
+    align-items: center;
+
+}
+.quantField button {
+    background-color: #a0c8e03e;
+    color: rgb(78, 71, 71);
+    border: none;
+    /* padding: 5px; */
+    font-size: 1.25em;
+    height: 1em;
+    width: 1em;
+    box-shadow: 0 .25em .5em darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .quantField button:active {
+    background-color: #c2d7e2;
+    box-shadow: 0 0 .25em darkslategray;
+    transform: translateY(.25em);
+  }
+  
+  .quantField button:not(:first-child) {
+    /* margin-top: .5em; */
+  }
+  
+.minusButton,.plusButton{
+    /* font-size: 1em; */
+    /* border: .5em solid gray; */
+    /* background-color: rgb(193, 184, 184); */
+    border-radius: 70%;
+
 }
 .remove{
     height: 40%;
