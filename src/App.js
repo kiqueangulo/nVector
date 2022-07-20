@@ -5,11 +5,16 @@ import SectionBox from './components/SectionBox';
 import './App.css';
 
 function App() {
+  let sectionsTestObject={
+    subSections:['Sub-section A','Sub-section B']
+  }
+  let subSectionArray = sectionsTestObject.subSections
+  // console.log(subSectionArray)
   return (
     <div className="App">
       <Header/>
       <ScrollBar />
-      <SectionBox/>
+      <SectionBox subSections={subSectionArray}/>
     </div>
   );
 };

@@ -3,12 +3,14 @@ import SubBox from "./SubBox";
 
 
 
-function SectionBox() {
-
+function SectionBox(props) {
+    // let subSectionArray = props.sectionsTestObject.subSections
+    console.log(props.subSections)
+    
 	return (
 		<div>
             SectionBox
-            <SubBox />
+            <SubBox subSections={props.subSections}/>
 		</div>
 	)
 }
