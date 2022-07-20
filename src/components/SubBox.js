@@ -18,7 +18,7 @@ function SubBox(props) {
         <li key={index}>
             Sub-Section: {index} ______________
                 <div className={subsection}>
-                    <ItemBox items={genTestItems(10)}/>
+                    <ItemBox items={genTestItems(5)}/>
                 </div>
         </li>
     ));
