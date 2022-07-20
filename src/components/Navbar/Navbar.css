@@ -72,6 +72,19 @@
 .user-name a {
     font-size: 25px;
 }
+.bottom-options {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.bottom-5 {
+    bottom: 60px;
+}
+.bottom-6 svg,
+.bottom-6 a {
+    fill: rgb(194, 31, 31);
+    color: rgb(194, 31, 31);
+}
 span {
     margin-left: 16px;
 }
