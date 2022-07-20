@@ -12,8 +12,10 @@ function App() {
   // console.log(subSectionArray)
   return (
     <div className="App">
-      <Header/>
-      <ScrollBar />
+      <div  className ="header">
+        <Header/>
+         <ScrollBar />
+      </div>
       <SectionBox subSections={subSectionArray}/>
     </div>
   );
