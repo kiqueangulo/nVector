@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   let sectionsTestObject={
-    subSections:['Sub-section A','Sub-section B']
+    subSections:['Sub-section A','Sub-section B','Sub-section C','Sub-section D','Sub-section E']
   }
   let subSectionArray = sectionsTestObject.subSections
   // console.log(subSectionArray)
