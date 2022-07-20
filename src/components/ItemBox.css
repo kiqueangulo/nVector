@@ -38,20 +38,19 @@ li {
     flex-direction: row;
     width: 25%;
     height: 75%;
-    /* border: 1px solid rgb(107, 226, 43); */
+    border-bottom: .1em solid rgba(90, 92, 89, 0.334);
     justify-content: space-between;
     align-items: center;
-
 }
 .quantField button {
-    background-color: #a0c8e03e;
+    background-color: #a0c7e00c;
     color: rgb(78, 71, 71);
     border: none;
     /* padding: 5px; */
     font-size: 1.25em;
     height: 1em;
     width: 1em;
-    box-shadow: 0 .25em .5em darkslategray;
+    box-shadow: 0 .25em .25em rgba(104, 152, 152, 0.389);
     cursor: pointer;
     transition: all 0.2s ease;
   }
@@ -60,6 +59,7 @@ li {
     background-color: #c2d7e2;
     box-shadow: 0 0 .25em darkslategray;
     transform: translateY(.25em);
+
   }
   
   .quantField button:not(:first-child) {
@@ -71,6 +71,7 @@ li {
     /* border: .5em solid gray; */
     /* background-color: rgb(193, 184, 184); */
     border-radius: 70%;
+    z-index: 1;
 
 }
 .remove{
