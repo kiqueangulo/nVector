@@ -14,9 +14,9 @@ function ItemBox(props) {
                     {item}
                 </div>
                 <div className="quantField">
-                    -
-                    {item.qauntity}
-                    +
+                   <div className="minusButton">-</div> 
+                   {/* <input value={item.qauntity} maxLength="5"></input> */}
+                    <div className="plusButton">+</div>
                 </div>
                 <div className="remove">
                    remove
