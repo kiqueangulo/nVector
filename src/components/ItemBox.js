@@ -10,9 +10,12 @@ function ItemBox(props) {
     const displayItems = items.map((item, index) => (
         <li key={index}>
             <div  className={className}>
-                <div className="itemName">
+                {/* <div className="itemName"> */}
+                <textarea class="scrollableTextBox" name="itemName">
                     {item}
-                </div>
+                </textarea>
+                     
+                {/* </div> */}
                 <div className="quantField">
                    <div className="minusButton">-</div> 
                    {/* <input value={item.qauntity} maxLength="5"></input> */}

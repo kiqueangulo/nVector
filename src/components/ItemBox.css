@@ -13,13 +13,25 @@ li {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
 }
 .itemName{
-    width: 50%;
-    overflow: scroll;
+    display: inline-flex;
+    /* width: 20%; */
+    overflow: hidden;
+    top: .2em;
     border: 1px solid blueviolet;
     border-radius: 0px 0px 0px 6px;
+    margin: .1em;
+}
+.scrollableTextBox{
+    align-items: center;
+    height: 2em;
+    width: 50%;
+    white-space: nowrap;
+    overflow: scroll;
+    border: none;
 }
 .quantField{
     display: flex;
