@@ -7,7 +7,7 @@ function ItemBox(props) {
     let className = "itemBox"
 
     const [count,setCount] = useState(0)
-    
+    //Displays an array of itmes from a call to the  
     const displayItems = items.map((item, index) => (
         
         <li key={index}>

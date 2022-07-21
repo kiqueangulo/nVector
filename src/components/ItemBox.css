@@ -71,7 +71,7 @@ li {
     /* border: .5em solid gray; */
     /* background-color: rgb(193, 184, 184); */
     border-radius: 70%;
-    z-index: 1;
+    /* z-index: 3; */
 
 }
 .remove{

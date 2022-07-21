@@ -15,10 +15,13 @@ function genTestItems(amt){
 function SubBox(props) {
     
     const displaySubSections = props.subSections.map((subsection, index) => (
+        // className = subsection + content
         <li key={index}>
-            Sub-Section: {index} ______________
+            <button type="button" class="collapsible">
+                Sub-Section: {index} ______________
+            </button>
                 <div className={subsection}>
-                    <ItemBox items={genTestItems(5)}/>
+                    <ItemBox items={genTestItems(5)} />
                 </div>
         </li>
     ));
