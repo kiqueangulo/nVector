@@ -5,7 +5,8 @@ import SectionBox from "./SectionBox"
 function SectionView() {
 
 	return (
-		<>
+		<>	
+			{/* section props sent to SectionBox get drilled to sub components */}
             <SectionBox />
         </>
 	)
