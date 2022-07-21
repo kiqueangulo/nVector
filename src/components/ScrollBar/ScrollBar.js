@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 import './ScrollBar.css';
 
 function ScrollBar() {
-    const sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5', 'Section 6', 'Section 7'];
+    const { locations } = useContext(GlobalContext);
 
-    const displaySections = sections.map((section, index) => (
-        <div key={index} className="section-item">{section}</div>
+    const displaySections = locations.map((item, index) => (
+        <div key={index} className="section-item">{item.section}</div>
     ));
 
     return (

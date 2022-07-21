@@ -1,3 +1,5 @@
+import { GlobalProvider } from './components/context/GlobalState.js';
+
 import Header from './components/Header.js';
 import ScrollBar from './components/ScrollBar/ScrollBar.js';
 import SectionBox from './components/SectionBox';
@@ -11,13 +13,15 @@ function App() {
   let subSectionArray = sectionsTestObject.subSections
   // console.log(subSectionArray)
   return (
-    <div className="App">
-      <div  className ="header">
-        <Header/>
-         <ScrollBar />
+    <GlobalProvider>
+      <div className="App">
+        <div  className ="header">
+          <Header/>
+          <ScrollBar />
+        </div>
+        <SectionBox subSections={subSectionArray}/>
       </div>
-      <SectionBox subSections={subSectionArray}/>
-    </div>
+    </GlobalProvider>
   );
 };
 
