@@ -1,14 +1,14 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-import './ItemBox.css';
+import "./ItemBox.css";
 
 
 function ItemBox(props) {
-    let items = props.items
+    const shelf_divs = props.items;
 
     const [count,setCount] = useState(200)
     //Displays an array of itmes from a call to the  
-    const displayItems = items.map((item, index) => (
+    const displayItems = shelf_divs.map((division, index) => (
         
         <li key={index}>
              
@@ -18,7 +18,7 @@ function ItemBox(props) {
                         i
                 </button>
                 <textarea class="scrollableTextBox" name="itemName">
-                    {item}
+                    {division.shelf_div}
                 </textarea>
                         
                 <div className="quantField">
@@ -41,11 +41,7 @@ function ItemBox(props) {
         </li>
     ));
 
-	return (
-		<div>
-            {displayItems}
-		</div>
-	)
+  return <div>{displayItems}</div>;
 }
 
-export default ItemBox
+export default ItemBox;

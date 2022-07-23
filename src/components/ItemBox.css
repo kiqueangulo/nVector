@@ -93,10 +93,6 @@ li {
 
   }
   
-  .quantField button:not(:first-child) {
-    /* margin-top: .5em; */
-  }
-  
 .minusButton,.plusButton{
     /* font-size: 1em; */
     /* border: .5em solid gray; */

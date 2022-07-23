@@ -14,5 +14,8 @@
   /* height: 20%; */
   background-color: #fff;
   z-index: 100;
-
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
