@@ -8,8 +8,13 @@ export const initialState = {
         { id: 3, section: 'drinks', shlef: 'c', shelf_div: 3 },
         { id: 3, section: 'dairy', shlef: 'a', shelf_div: 4 },
         { id: 3, section: 'licour', shlef: 'b', shelf_div: 1 }
+    ],
+    //Emmulate a call from product locations table:
+    productLocations:[
+        
     ]
 };
+
 
 export const GlobalContext = createContext(initialState);
 

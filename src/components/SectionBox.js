@@ -5,10 +5,10 @@ import  "./SectionBox.css";
 
 
 function SectionBox(props) {
+	// const { locations } = useContext(GlobalContext);
     console.log(props.subSections)
 	return (
 		<div className="sectionBody">
-            SectionBox
             <SubBox subSections={props.subSections}/>
 		</div>
 	)
