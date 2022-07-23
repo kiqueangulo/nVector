@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 99;
 }
 .menu-bars {
     font-size: 1.7rem;
@@ -16,7 +17,7 @@
     top: 0;
     left: -100%;
     transition: 850ms;
-    /* z-index: 2; */
+    z-index: 99;
 }
 .nav-menu::before {
     position: fixed;
