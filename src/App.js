@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocationContext from "./context/LocationContext.js";
+import { SidebarData } from "./components/Navbar/SidebarData.js";
 
 import Header from "./components/Header.js";
 import ScrollBar from "./components/ScrollBar/ScrollBar.js";
@@ -19,13 +20,9 @@ function App() {
           <ScrollBar />
         </div>
         <Routes>
-          <Route path="/user" />
-          <Route exact path="/" />
-          <Route path="/new" />
-          <Route path="/locations" />
-          <Route path="/synch" />
-          <Route path="/support" />
-          <Route path="/log" />
+          {SidebarData.map((route) => (
+            <Route path={route.path} />
+          ))}
           {sectionKeys?.map((section, index) => (
             <Route
               key={index}
