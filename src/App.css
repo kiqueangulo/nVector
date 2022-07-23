@@ -11,8 +11,9 @@
 .header{
   position: sticky;
   top: 0px;
-  height: 20%;
+  /* height: 20%; */
   background-color: #fff;
+  z-index: 100;
 }
 a {
   text-decoration: none;
