@@ -20,8 +20,8 @@ function App() {
           <ScrollBar />
         </div>
         <Routes>
-          {SidebarData.map((route) => (
-            <Route path={route.path} />
+          {SidebarData.map((route, index) => (
+            <Route key={index} path={route.path} />
           ))}
           {sectionKeys?.map((section, index) => (
             <Route

@@ -8,13 +8,15 @@ function ScrollBar() {
   const { allLocations } = useLocationContext();
   const [sectionKeys] = allLocations;
 
-  const displaySections = sectionKeys?.map((section, index) => (
-    <Link to={`${section}`} key={index} className="section-item">
-      {section}
-    </Link>
-  ));
-
-  return <div className="section-wrapper">{displaySections}</div>;
+  return (
+    <div className="section-wrapper">
+      {sectionKeys?.map((section, index) => (
+        <Link to={`${section}`} key={index} className="section-item">
+          {section}
+        </Link>
+      ))}
+    </div>
+  );
 }
 
 export default ScrollBar;
