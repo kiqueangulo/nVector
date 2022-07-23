@@ -1,33 +1,39 @@
 import React from "react";
+import Collapsible from "react-collapsible";
+
+import { orderByShelf } from "../helpers/locations";
 import ItemBox from "./ItemBox";
 
-import './SubBox.css';
+import "./SubBox.css";
 
-function genTestItems(amt){
-    const testItems=[]
-    for(let i = 0; i< amt;i++){
-        testItems[i]=`Test Item Name Number ${i}`
-    }
-    return testItems
+//Generate subsection tab
+function subSectionTab(index) {
+  return (
+    <button type="button" class="collapsibleButton">
+      Shelf {index} ------------
+    </button>
+  );
 }
-
-
 function SubBox(props) {
-    
-    const displaySubSections = props.subSections.map((subsection, index) => (
-        <li key={index}>
-            Sub-Section: {index} ______________
-                <div className={subsection}>
-                    <ItemBox items={genTestItems(5)}/>
-                </div>
-        </li>
-    ));
-	return (
+  const [shelfKeys, shelfs] = orderByShelf(props.subSections);
 
-		<div className ="subBox">
-            {displaySubSections}
-		</div>
-	)
+  const displaySubSections = shelfKeys.map((shelfKey, index) => (
+    // className = subsection + content
+    <li key={index}>
+      <div className="line"></div>
+      <Collapsible
+        open
+        trigger={subSectionTab(shelfKey)}
+        lazyRender="false"
+        className=""
+      >
+        <div className="content">
+          <ItemBox items={shelfs[shelfKey]} />
+        </div>
+      </Collapsible>
+    </li>
+  ));
+  return <div className="subBox">{displaySubSections}</div>;
 }
 
-export default SubBox
+export default SubBox;

@@ -1,10 +1,49 @@
 .subBox{
 
     border-radius: 0px 0px 10px 10px;
-    background-color: #E8F9F7;
+    background-color: #fff;
     width: 95%;
+    min-height: 30vh;
+    height: auto;
     margin: auto;
-    padding-top: .5em;
-    padding-bottom: 1em;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    margin-bottom: 1.5em;
     overflow: auto;  
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid red; */
+    
 }
+.subBox li {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.collapsibleButton {
+    position: relative;
+    background-color: #868686;
+    color: white;
+    cursor: pointer;
+    padding: .35em;
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    z-index: 3;
+    border-radius:10px 100px / 150px;
+    box-shadow: -13px 1px 23px -12px rgba(0,0,0,0.79);
+    
+  }
+  
+  .active, .collapsibleButton:hover {
+    background-color: #555;
+  }
+  .content{
+      background-color: #E8F9F7;
+      /* border: 1px dotted blue; */
+      padding-top: 1.25em;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-radius: 15px 0px 15px 15px;
+      
+  }

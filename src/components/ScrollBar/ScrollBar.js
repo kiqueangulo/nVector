@@ -1,19 +1,37 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import useLocationContext from "../../context/LocationContext.js";
 
-import './ScrollBar.css';
+import SectionBox from "../SectionBox.js";
+
+import "./ScrollBar.css";
 
 function ScrollBar() {
-    const sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5', 'Section 6', 'Section 7'];
+  const { allLocations } = useLocationContext();
+  const [sectionKeys, sectionsObj] = allLocations;
+  console.log(sectionKeys);
+  console.log(sectionsObj);
 
-    const displaySections = sections.map((section, index) => (
-        <div key={index} className="section-item">{section}</div>
-    ));
+  const displaySections = sectionKeys?.map((section, index) => (
+    <Link to={`${section}`} key={index} className="section-item">
+      {section}
+    </Link>
+  ));
 
-    return (
-        <div className="section-wrapper">
-            {displaySections}
-        </div>
-    );
-};
+  const sectionRoutes = sectionKeys?.map((section, index) => (
+    <Route
+      key={index}
+      path={`${section}`}
+      element={<SectionBox subSections={sectionsObj[section]} />}
+    />
+  ));
+
+  return (
+    <Router>
+      <div className="section-wrapper">{displaySections}</div>
+      <Routes>{sectionRoutes}</Routes>
+    </Router>
+  );
+}
 
 export default ScrollBar;

@@ -15,8 +15,8 @@
     margin-right: 3px;
     border-radius: 25px;
 }
-.section-item:nth-child(2n) {
-    background-color: rgb(240, 226, 204);
+.section-item:active {
+    background-color: #F1E2CC;
 }
 @media only screen and (min-width : 992px) {
     .section-wrapper::-webkit-scrollbar {
