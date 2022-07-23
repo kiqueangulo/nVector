@@ -17,7 +17,7 @@ function subSectionTab(index) {
 function SubBox(props) {
   const [shelfKeys, shelfs] = orderByShelf(props.subSections);
 
-  const displaySubSections = shelfKeys.map((shelfKey, index) => (
+  const displaySubSections = shelfKeys.map((shelfKey, index) => {
     // className = subsection + content
     <li key={index}>
       <div className="line"></div>
@@ -31,8 +31,8 @@ function SubBox(props) {
           <ItemBox items={shelfs[shelfKey]} />
         </div>
       </Collapsible>
-    </li>
-  ));
+    </li>;
+  });
   return <div className="subBox">{displaySubSections}</div>;
 }
 
