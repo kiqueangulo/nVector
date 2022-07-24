@@ -1,18 +1,15 @@
 .subBox{
-
     border-radius: 0px 0px 10px 10px;
     background-color: #fff;
     width: 95%;
     min-height: 30vh;
     height: auto;
     margin: auto;
-    margin-top: 1.5em;
+    margin-top: 0em;
     padding-top: 1em;
     margin-bottom: 1.5em;
-    overflow: auto;  
+    overflow: auto;
     font-family: 'Roboto', sans-serif;
-    /* border: 1px solid red; */
-    
 }
 .subBox li {
   display: flex;
