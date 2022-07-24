@@ -17,7 +17,6 @@ export function useLocation() {
 
     fetchData();
   }, []);
-  console.log(allLocations);
 
   return [allLocations];
 }
