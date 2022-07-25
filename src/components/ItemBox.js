@@ -40,9 +40,10 @@ function ItemBox(props) {
             >-</button>
 
             <div className="quantInputForm">
-                <textbox class="quantTextBox" name="itemQnt">
-                    {count}
-                </textbox>
+                <textarea type="number" class="quantTextBox" 
+                value={count}
+                // maxlength="4" size="4"
+                />
                 
             </div>
 
