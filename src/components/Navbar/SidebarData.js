@@ -1,5 +1,8 @@
 import React from "react";
 
+import Search from "../Search/Search";
+import Add from "../Add/Add";
+
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
@@ -18,16 +21,18 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Add Location",
+    title: "Search",
+    path: "/search",
+    icon: <FaIcons.FaWarehouse />,
+    cName: "nav-text",
+    component: <Search />,
+  },
+  {
+    title: "Add",
     path: "/new",
     icon: <AiIcons.AiFillFileAdd />,
     cName: "nav-text",
-  },
-  {
-    title: "Search",
-    path: "/locations",
-    icon: <FaIcons.FaWarehouse />,
-    cName: "nav-text",
+    component: <Add />,
   },
   {
     title: "Sync",

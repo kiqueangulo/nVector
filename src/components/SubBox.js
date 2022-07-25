@@ -15,7 +15,7 @@ function SubBox(props) {
       <Collapsible
         open
         trigger={
-          <button type="button" class="collapsibleButton">
+          <button type="button" className="collapsibleButton">
             Shelf {shelfKey} ------------
           </button>
         }
@@ -23,7 +23,9 @@ function SubBox(props) {
         className=""
       >
         <div className="content">
-          <ItemBox items={shelfs[shelfKey]} />
+          <ul>
+            <ItemBox items={shelfs[shelfKey]} />
+          </ul>
         </div>
       </Collapsible>
     </li>

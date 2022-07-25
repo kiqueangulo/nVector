@@ -1,9 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useGeneralContext } from "../../context/GeneralContext";
 
-import "./Search.css";
+import "../Search/Search.css";
 
-function Search() {
+function Add() {
   const {
     displayLocationForm,
     setDisplayLocationForm,
@@ -20,63 +21,50 @@ function Search() {
     e.preventDefault();
     setDisplayProductForm(!displayProductForm);
   };
+  const params = useParams();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(params);
+  };
 
   return (
     <>
-      <h2>Search</h2>
+      <h2>Add</h2>
       <div
         className={`form-title ${displayProductForm && "hide-title"}`}
         onClick={showLocationForm}
       >
         <h3>Locations</h3>
       </div>
-      <form className={`search-form ${displayLocationForm && "active-form"}`}>
+      <form
+        className={`search-form ${displayLocationForm && "active-form"}`}
+        onSubmit={handleSubmit}
+      >
         <section>
           <p>
             <label htmlFor="section">
               <span>Section:</span>
             </label>
-            <select id="section" name="sections">
-              <option defaultValue="">All</option>
-              <option value="freezer">Freezer</option>
-              <option value="alcohol">Alcohol</option>
-              <option value="dairy">Dairy</option>
-            </select>
+            <input type="text" id="section" name="sections" required />
           </p>
           <p>
             <label htmlFor="shelf">
               <span>Shelf:</span>
             </label>
-            <select id="shelf" name="shelf_letter">
-              <option defaultValue="">All</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-              <option value="E">E</option>
-            </select>
+            <input type="text" id="shelf" name="shelf_letter" required />
           </p>
           <p>
             <label htmlFor="division">
               <span>Division:</span>
             </label>
-            <select id="division" name="shelf_div">
-              <option defaultValue="">All</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-            </select>
+            <input type="text" id="division" name="shelf_div" required />
           </p>
         </section>
         <section>
           <p>
-            <button type="submit">Search Locations</button>
+            <button type="submit">Add Locations</button>
           </p>
           <p>
             <button onClick={(e) => showLocationForm(e)}>Go Back</button>
@@ -95,13 +83,7 @@ function Search() {
             <label htmlFor="name">
               <span>Name:</span>
             </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              defaultValue=""
-              placeholder="All Products"
-            />
+            <input type="text" id="name" name="name" defaultValue="" required />
           </p>
           <p>
             <label htmlFor="brand">
@@ -110,8 +92,21 @@ function Search() {
             <input
               type="text"
               id="brand"
+              name="brand"
               defaultValue=""
-              placeholder="All Brands"
+              required
+            />
+          </p>
+          <p>
+            <label htmlFor="quatity">
+              <span>Quantity:</span>
+            </label>
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              defaultValue=""
+              required
             />
           </p>
           <p>
@@ -121,14 +116,15 @@ function Search() {
             <input
               type="number"
               id="price"
+              name="price"
               defaultValue=""
-              placeholder="Any Price"
+              required
             />
           </p>
         </section>
         <section>
           <p>
-            <button type="submit">Search Product</button>
+            <button type="submit">Add Product</button>
           </p>
           <p>
             <button onClick={(e) => showProductForm(e)}>Go Back</button>
@@ -139,4 +135,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Add;
