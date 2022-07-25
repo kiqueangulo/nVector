@@ -158,8 +158,12 @@ textarea{
     font-size: 75%;
     white-space: nowrap;
     min-width: 5ch;
-   
+    overflow:hidden;
+    resize: none;
 }
+.quantTextBox scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+    }
   .minusButton button:active,.plusButton button:active {
     background-color: #c2d7e2;
     box-shadow: 0 0 .2em darkslategray;

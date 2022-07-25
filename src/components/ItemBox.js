@@ -5,7 +5,7 @@ import "./ItemBox.css";
 function ItemBox(props) {
   const shelf_divs = props.items;
 
-  let [count, setCount] = useState(200);
+  let [count, setCount] = useState(0);
 
 
 
@@ -30,13 +30,7 @@ function ItemBox(props) {
             <div className="upperQuant">
             <button
                 className="minusButton"
-                onClick={() => {
-                if (count > 0) {
-                    setCount(count - 1);
-                } else {
-                    count = 0;
-                }
-                }}
+                onClick={() => {count > 0 ? setCount(count - 1) : count = 0}}
             >-</button>
 
             <div className="quantInputForm">
