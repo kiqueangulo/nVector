@@ -21,12 +21,16 @@ function App() {
         </div>
         <Routes>
           {SidebarData.map((route, index) => (
-            <Route key={index} path={route.path} />
-          ))}
-          {sectionKeys?.map((section, index) => (
             <Route
               key={index}
-              path={`${section}`}
+              path={route.path}
+              element={route.component ?? route.component}
+            />
+          ))}
+          {sectionKeys.map((section, index) => (
+            <Route
+              key={index}
+              path={`/${section}`}
               element={<SectionBox subSections={sectionsObj[section]} />}
             />
           ))}

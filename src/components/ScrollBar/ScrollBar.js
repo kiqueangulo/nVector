@@ -11,7 +11,7 @@ function ScrollBar() {
   return (
     <div className="section-wrapper">
       {sectionKeys?.map((section, index) => (
-        <Link to={`${section}`} key={index} className="section-item">
+        <Link to={`/${section}`} key={index} className="section-item">
           {section}
         </Link>
       ))}

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useGeneralContext } from "../../context/GeneralContext.js";
 import { IconContext } from "react-icons";
 
 import { SidebarData } from "./SidebarData.js";
@@ -9,7 +10,7 @@ import * as AiIcons from "react-icons/ai";
 import "./Navbar.css";
 
 function Navbar() {
-  const [sidebar, setSidebar] = useState(false);
+  const { sidebar, setSidebar } = useGeneralContext();
 
   const showSidebar = () => setSidebar(!sidebar);
 

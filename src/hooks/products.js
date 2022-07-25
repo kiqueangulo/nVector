@@ -8,8 +8,7 @@ export function useProduct() {
     const fetchData = async () => {
       try {
         const { data } = await productsCall.getAllProducts();
-        console.log(data);
-        // setAllProducts(data);
+        setAllProducts(data);
       } catch (err) {
         console.log(err);
       }

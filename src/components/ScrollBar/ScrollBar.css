@@ -9,6 +9,10 @@
     /* margin: .25em 0em ; */
 }
 
+.scrollbar-out {
+    display: none;
+}
+
 .section-item {
     min-width: 90px;
     flex-grow: 1;

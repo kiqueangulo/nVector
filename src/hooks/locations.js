@@ -9,6 +9,7 @@ export function useLocation() {
     const fetchData = async () => {
       try {
         const { data } = await locationsCall.getAllLocations();
+        console.log(data);
         setAllLocations(separateBySections(data));
       } catch (err) {
         console.log(err);
