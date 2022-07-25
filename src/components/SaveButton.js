@@ -4,9 +4,9 @@ function SaveButton() {
 	const buttonStyle = {
 		padding: '5px 13px',
 		borderRadius: '20px',
-		backgroundColor: '#cde5c4',
-		border: 'none',
-		color: '#989f94',
+		backgroundColor: '#a9e2a8',
+		border: '.1em solid #86868621',
+		color: '#fff',
 		fontFamily: 'Slack-Lato, Slack-Fractions, applelogo, sans-serif',
 		fontSize: '1rem'
 	};

@@ -12,7 +12,7 @@ function Header() {
     flexflow: "row nowrap",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "1px 5px",
+    padding: "1em 1em",
     marginTop: "5px",
     marginBottom: "5px",
   };
