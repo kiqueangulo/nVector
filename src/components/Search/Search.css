@@ -1,0 +1,11 @@
+.hide-title {
+    display: none;
+}
+
+.search-form {
+    display: none;
+}
+
+.active-form {
+    display: block;
+}

@@ -1,13 +1,13 @@
 import React, { createContext, useContext } from "react";
 import { useLocation } from "../hooks/locations.js";
 
-export const LocationContext = createContext();
+const LocationContext = createContext();
 
-export default function useLocationContext() {
+export function useLocationContext() {
   return useContext(LocationContext);
 }
 
-export const LocationProvider = ({ children }) => {
+export default function LocationProvider({ children }) {
   const [allLocations] = useLocation();
 
   return (
@@ -19,4 +19,4 @@ export const LocationProvider = ({ children }) => {
       {children}
     </LocationContext.Provider>
   );
-};
+}

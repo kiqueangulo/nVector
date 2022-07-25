@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import useLocationContext from "./context/LocationContext.js";
+import { useLocationContext } from "./context/LocationContext.js";
 import { SidebarData } from "./components/Navbar/SidebarData.js";
 
 import Header from "./components/Header.js";
@@ -21,12 +21,16 @@ function App() {
         </div>
         <Routes>
           {SidebarData.map((route, index) => (
-            <Route key={index} path={route.path} />
-          ))}
-          {sectionKeys?.map((section, index) => (
             <Route
               key={index}
-              path={`${section}`}
+              path={route.path}
+              element={route.component ?? route.component}
+            />
+          ))}
+          {sectionKeys.map((section, index) => (
+            <Route
+              key={index}
+              path={`/${section}`}
               element={<SectionBox subSections={sectionsObj[section]} />}
             />
           ))}
