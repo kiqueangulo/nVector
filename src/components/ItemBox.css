@@ -75,14 +75,16 @@ li {
     border-radius: 0px 0px 0px 6px;
     margin: .1em;
     font-style: oblique;
-    
 }
-.scrollableTextBox{
+textarea{
+    resize: none;
+  }
+.scrollableTextBox {
     /* align-items: center; */
     /* top: 70%; */
     position: relative;
     height: 2em;
-    width: 50%;
+    width: 100%;
     white-space: nowrap;
     overflow: scroll;
     border: none;
@@ -90,6 +92,13 @@ li {
     color: #868686;
     box-shadow: 0px 6px 15px -14px rgba(0,0,0,0.73);
     padding: .25em .5em;
+    margin-top: -.5em;
+}
+.textAreaStyling {
+    position: relative;
+    width: 50%;
+    top: -1em;
+    border-bottom: .05em solid #868686;
 }
 
 .quantField{
@@ -176,6 +185,8 @@ li {
     display: flex;
     
 }
+
+
 .submitQuant{
     /* display: flex-block; */
     /* flex-direction: column; */
