@@ -10,6 +10,7 @@ function ItemBox(props) {
   const displayItems = shelf_divs.map((division, index) => (
     <li key={index}>
       <div className="itemBox">
+        <div className="infoButtonCover"></div>
         <button className="infoButton">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
@@ -18,7 +19,6 @@ function ItemBox(props) {
             />
           </svg>
         </button>
-
         <div className="textAreaStyling">
           <textarea
             class="scrollableTextBox"
@@ -38,7 +38,7 @@ function ItemBox(props) {
               -
             </button>
 
-            <div className="quantInputForm">
+            <div className="quantInputForm scroll">
               <textarea
                 type="number"
                 class="quantTextBox"

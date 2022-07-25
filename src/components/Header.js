@@ -15,7 +15,6 @@ function Header() {
     padding: "1em 1em",
     marginTop: "5px",
     marginBottom: "5px",
-   
   };
 
   return (
