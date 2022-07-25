@@ -78,8 +78,9 @@ li {
     
 }
 .scrollableTextBox{
-    align-items: center;
-    top: 70%;
+    /* align-items: center; */
+    /* top: 70%; */
+    position: relative;
     height: 2em;
     width: 50%;
     white-space: nowrap;
