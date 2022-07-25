@@ -35,29 +35,31 @@ li {
     float: left;
     top: -17px;
     left: -10px;
-    z-index: 3;
+    z-index: 2;
 }
-.infoBackButton{
+.infoButtonCover{
     position: absolute;
     border-radius: 70% ;
     /* padding: .5em; */
     background-color: #fff;
     border: 2px dotted #020807;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     border: none;
     font-size: 1em;
     float: left;
-    top: -17px;
-    left: -10px;
-    z-index: 1;
+    top: 4px;
+    left: 2px;
+    z-index: 3;
+    /* display: none; */
 }
-.infoBackButton:active{
-    border: 2px dotted #80BDB6;
+.infoButtonCover:active{
+    /* border: 2px dotted #80BDB6; */
     /* background-color: black; */
 }
 .infoButton:active{
-    background-color: #E8F9F7;
+    /* background-color: #E8F9F7; */
+    border: .15em solid #80BDB6;
 }
 /* .itemQuantBox{
     display: flex;
@@ -149,7 +151,6 @@ textarea{
   .quantTextBox{
     position: relative;
     color: #868686;
-    border: none;
     /* border-bottom: .1em solid rgba(90, 92, 89, 0.334); */
     width:100%;
     height: 2em;
@@ -157,11 +158,13 @@ textarea{
     text-align: center;
     font-size: 75%;
     white-space: nowrap;
-    min-width: 5ch;
-    overflow:hidden;
+    overflow: hidden;
+    border: none;
     resize: none;
+    min-width: 5ch;
+    
 }
-.quantTextBox scrollbar-hidden::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     display: none;
     }
   .minusButton button:active,.plusButton button:active {
