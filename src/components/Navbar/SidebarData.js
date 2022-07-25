@@ -1,6 +1,7 @@
 import React from "react";
 
 import Search from "../Search/Search";
+import Add from "../Add/Add";
 
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -31,6 +32,7 @@ export const SidebarData = [
     path: "/new",
     icon: <AiIcons.AiFillFileAdd />,
     cName: "nav-text",
+    component: <Add />,
   },
   {
     title: "Sync",
