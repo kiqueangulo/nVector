@@ -20,14 +20,14 @@ function App() {
           <ScrollBar />
         </div>
         <Routes>
-          {SidebarData.map((route, index) => (
+          {SidebarData?.map((route, index) => (
             <Route
               key={index}
               path={route.path}
               element={route.component ?? route.component}
             />
           ))}
-          {sectionKeys.map((section, index) => (
+          {sectionKeys?.map((section, index) => (
             <Route
               key={index}
               path={`/${section}`}

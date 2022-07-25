@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useGeneralContext } from "../../context/GeneralContext";
 
 import "../Search/Search.css";
@@ -20,6 +21,13 @@ function Add() {
     e.preventDefault();
     setDisplayProductForm(!displayProductForm);
   };
+  const params = useParams();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(params);
+  };
 
   return (
     <>
@@ -30,7 +38,10 @@ function Add() {
       >
         <h3>Locations</h3>
       </div>
-      <form className={`search-form ${displayLocationForm && "active-form"}`}>
+      <form
+        className={`search-form ${displayLocationForm && "active-form"}`}
+        onSubmit={handleSubmit}
+      >
         <section>
           <p>
             <label htmlFor="section">
