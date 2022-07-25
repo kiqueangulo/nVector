@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import useLocationContext from "./context/LocationContext.js";
+import { useLocationContext } from "./context/LocationContext.js";
 import { SidebarData } from "./components/Navbar/SidebarData.js";
 
 import Header from "./components/Header.js";

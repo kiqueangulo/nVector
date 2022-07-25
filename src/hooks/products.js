@@ -1,19 +1,22 @@
-import { useEffect } from "react";
-import { productsCall } from "../api/products.js";
+import { useState, useEffect } from "react";
+import { productsCall } from "../api/products";
 
-export function useProduct(array = []) {
+export function useProduct() {
+  const [allProducts, setAllProducts] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await productsCall.getAllProducts();
-        array.push(...data.products);
+        console.log(data);
+        // setAllProducts(data);
       } catch (err) {
         console.log(err);
       }
     };
 
     fetchData();
-  }, [array]);
+  }, []);
 
-  return array;
+  return [allProducts];
 }

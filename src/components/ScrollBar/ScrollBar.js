@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useLocationContext from "../../context/LocationContext.js";
+import { useLocationContext } from "../../context/LocationContext.js";
 
 import "./ScrollBar.css";
 

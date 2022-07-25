@@ -1,5 +1,5 @@
 import React from "react";
-import { LocationProvider } from "./LocationContext";
+import LocationProvider from "./LocationContext";
 
 function GlobalProvider({ children }) {
   return <LocationProvider>{children}</LocationProvider>;
