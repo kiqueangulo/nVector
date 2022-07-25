@@ -7,8 +7,11 @@
 .menu-bars {
     font-size: 1.7rem;
 }
+.menu-bars:hover {
+    color: #868686;
+}
 .nav-menu {
-    background-color: rgb(219, 219, 203);
+    background-color: rgb(255, 255, 255);
     width: 80%;
     height: 100vh;
     display: flex;
@@ -17,8 +20,11 @@
     top: 0;
     z-index: 90;
     left: -200%;
+    border-radius: 25px 25px;
+    border: .1em solid #868686;
     transition: ease-in-out 750ms;
 }
+
 .nav-menu.active-nav {
     left: 0;
 }
@@ -68,7 +74,10 @@
     border-radius: 4px;
 }
 .user-name {
-    background-color: rgb(175, 175, 151);
+    background-color: rgba(232, 249, 247, 0.676);
+    border-bottom: .05em solid #868686;
+    box-shadow: 0px 6px 15px -14px rgba(0, 0, 0, 0.212), 0px -6px 15px -14px rgba(0, 0, 0, 0.212); 
+    
 }
 .user-name a {
     font-size: 25px;
@@ -88,4 +97,8 @@
 }
 span {
     margin-left: 16px;
+}
+
+.bottom-options:hover {
+    background-color: #fff;
 }

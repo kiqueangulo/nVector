@@ -5,7 +5,7 @@ import "./ItemBox.css";
 function ItemBox(props) {
   const shelf_divs = props.items;
 
-  let [count, setCount] = useState(200);
+  let [count, setCount] = useState(0);
 
   const displayItems = shelf_divs.map((division, index) => (
     <li key={index}>
@@ -18,35 +18,40 @@ function ItemBox(props) {
             />
           </svg>
         </button>
-        <textarea
-          className="scrollableTextBox"
-          name="itemName"
-          defaultValue={division.shelf_div}
-        ></textarea>
+
+        <div className="textAreaStyling">
+          <textarea
+            class="scrollableTextBox"
+            name="itemName"
+            defaultValue={division.shelf_div}
+          ></textarea>
+        </div>
 
         <div className="quantField">
           <div className="upperQuant">
             <button
               className="minusButton"
               onClick={() => {
-                if (count > 0) {
-                  setCount(count - 1);
-                } else {
-                  count = 0;
-                }
+                count > 0 ? setCount(count - 1) : (count = 0);
               }}
             >
               -
             </button>
+
             <div className="quantInputForm">
-              <textbox className="quantTextBox" name="itemQnt">
-                {count}
-              </textbox>
+              <textarea
+                type="number"
+                class="quantTextBox"
+                value={count}
+                // maxlength="4" size="4"
+              />
             </div>
+
             <button className="plusButton" onClick={() => setCount(count + 1)}>
               +
             </button>
           </div>
+
           <div className="lowerQuant">
             <button className="submitQuant">submit</button>
           </div>
