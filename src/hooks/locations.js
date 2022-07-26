@@ -21,16 +21,16 @@ export function useLocation() {
   return allLocations;
 }
 
-export function useAddLocation(reqBody) {
-  useEffect(() => {
-    const addNewLocation = async (body) => {
-      try {
-        await locationsCall.createLocation(body);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+// export function useAddLocation(reqBody) {
+//   useEffect(() => {
+//     const addNewLocation = async (body) => {
+//       try {
+//         await locationsCall.createLocation(body);
+//       } catch (err) {
+//         console.log(err);
+//       }
+//     };
 
-    addNewLocation(reqBody);
-  }, [reqBody]);
-}
+//     addNewLocation(reqBody);
+//   }, [reqBody]);
+// }
