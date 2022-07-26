@@ -53,10 +53,7 @@ li {
     z-index: 3;
     /* display: none; */
 }
-.infoButtonCover:active{
-    /* border: 2px dotted #80BDB6; */
-    /* background-color: black; */
-}
+
 .infoButton:active{
     /* background-color: #E8F9F7; */
     border: .15em solid #80BDB6;
