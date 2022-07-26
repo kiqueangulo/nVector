@@ -21,6 +21,7 @@ function SearchProductForm() {
     e.preventDefault();
 
     const foundProducts = await productsCall.getAllProducts(productBody);
+    console.log(foundProducts);
 
     navigate(`/search/products/results`);
 

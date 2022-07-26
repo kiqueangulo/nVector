@@ -8,6 +8,7 @@ import "./SubBox.css";
 
 function SubBox(props) {
   const [shelfKeys, shelfs] = orderByShelf(props.subSections);
+  console.log(shelfs);
 
   const displaySubSections = shelfKeys.map((shelfKey, index) => (
     <li key={index}>

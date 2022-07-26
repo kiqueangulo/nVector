@@ -24,6 +24,7 @@ function App() {
           {SidebarData?.map((route, index) => (
             <Route
               key={index}
+              excat
               path={route.path}
               element={route.component ?? route.component}
             />
@@ -31,13 +32,14 @@ function App() {
           {sectionKeys?.map((section, index) => (
             <Route
               key={index}
+              exact
               path={`/${section}`}
               element={<SectionBox subSections={sectionsObj[section]} />}
             />
           ))}
           <Route
             exact
-            path="/search/products/:product_id"
+            path="/search/products/results/:product_id"
             element={<ProductDetails />}
           />
         </Routes>

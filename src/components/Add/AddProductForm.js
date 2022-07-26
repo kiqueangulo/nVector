@@ -22,7 +22,7 @@ function AddProductForm() {
 
     const newProduct = await productsCall.createProduct(productBody);
 
-    navigate(`/search/products/${newProduct.product_id}`);
+    navigate(`/search/products/results/${newProduct.product_id}`);
 
     setProductBody(initialState);
     setDisplayProductForm(false);
