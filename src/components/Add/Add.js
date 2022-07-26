@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { useGeneralContext } from "../../context/GeneralContext";
+import { useLocationContext } from "../../context/LocationContext";
+import { useAddLocation } from "../../hooks/locations";
 
 import "../Search/Search.css";
 
@@ -12,6 +13,8 @@ function Add() {
     setDisplayProductForm,
   } = useGeneralContext();
 
+  const { locationBody, setLocationBody } = useLocationContext();
+
   const showLocationForm = (e) => {
     e.preventDefault();
     setDisplayLocationForm(!displayLocationForm);
@@ -21,12 +24,11 @@ function Add() {
     e.preventDefault();
     setDisplayProductForm(!displayProductForm);
   };
-  const params = useParams();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(params);
+    e.target.reset();
   };
 
   return (
