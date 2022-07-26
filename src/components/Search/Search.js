@@ -22,7 +22,7 @@ function Search() {
   };
 
   return (
-    <>
+    <div className="container">
       <h2>Search</h2>
       <div
         className={`form-title ${displayProductForm && "hide-title"}`}
@@ -76,10 +76,10 @@ function Search() {
         </section>
         <section>
           <p>
-            <button type="submit">Search Locations</button>
+            <button type="submit"className="submitButton">Search Locations</button>
           </p>
           <p>
-            <button onClick={(e) => showLocationForm(e)}>Go Back</button>
+            <button onClick={(e) => showLocationForm(e)}className="backButton">Go Back</button>
           </p>
         </section>
       </form>
@@ -128,14 +128,14 @@ function Search() {
         </section>
         <section>
           <p>
-            <button type="submit">Search Product</button>
+            <button type="submit" className="submitButton">Search Product</button>
           </p>
           <p>
-            <button onClick={(e) => showProductForm(e)}>Go Back</button>
+            <button onClick={(e) => showProductForm(e)} className="backButton">Go Back</button>
           </p>
         </section>
       </form>
-    </>
+    </div>
   );
 }
 
