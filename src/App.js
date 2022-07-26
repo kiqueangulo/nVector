@@ -37,7 +37,7 @@ function App() {
           ))}
           <Route
             exact
-            path="/search/products/:product_id"
+            path="/search/products/results/:product_id"
             element={<ProductDetails />}
           />
         </Routes>
