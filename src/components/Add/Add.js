@@ -30,7 +30,7 @@ function Add() {
   };
 
   return (
-    <>
+    <div className="container">
       <h2>Add</h2>
       <div
         className={`form-title ${displayProductForm && "hide-title"}`}
@@ -64,10 +64,10 @@ function Add() {
         </section>
         <section>
           <p>
-            <button type="submit">Add Locations</button>
+            <button type="submit" className="submitButton">Add Locations</button>
           </p>
           <p>
-            <button onClick={(e) => showLocationForm(e)}>Go Back</button>
+            <button onClick={(e) => showLocationForm(e)} className="backButton">Go Back</button>
           </p>
         </section>
       </form>
@@ -124,14 +124,14 @@ function Add() {
         </section>
         <section>
           <p>
-            <button type="submit">Add Product</button>
+            <button type="submit" className="submitButton">Add Product</button>
           </p>
           <p>
-            <button onClick={(e) => showProductForm(e)}>Go Back</button>
+            <button onClick={(e) => showProductForm(e)} className="backButton">Go Back</button>
           </p>
         </section>
       </form>
-    </>
+    </div>
   );
 }
 
