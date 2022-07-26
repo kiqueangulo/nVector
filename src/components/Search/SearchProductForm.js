@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { useProductContext } from "../../context/ProductContext";
 
-function AddProductForm() {
+function SearchProductForm() {
   const navigate = useNavigate();
 
   const { displayLocationForm, displayProductForm, setDisplayProductForm } =
@@ -20,9 +20,9 @@ function AddProductForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newProduct = await productsCall.createProduct(productBody);
+    const foundProducts = await productsCall.getAllProducts(productBody);
 
-    navigate(`/search/products/${newProduct.product_id}`);
+    navigate(`/search/products/results`);
 
     setProductBody(initialState);
     setDisplayProductForm(false);
@@ -50,11 +50,11 @@ function AddProductForm() {
               id="name"
               name="name"
               defaultValue=""
+              placeholder="All Products"
               value={productBody.name}
               onChange={(e) =>
                 setProductBody({ ...productBody, name: e.target.value })
               }
-              required
             />
           </p>
           <p>
@@ -66,54 +66,22 @@ function AddProductForm() {
               id="brand"
               name="brand"
               defaultValue=""
+              placeholder="All Brands"
               value={productBody.brand}
               onChange={(e) =>
                 setProductBody({ ...productBody, brand: e.target.value })
               }
-              required
-            />
-          </p>
-          <p>
-            <label htmlFor="quantity">
-              <span>Quantity:</span>
-            </label>
-            <input
-              type="number"
-              id="quantity"
-              name="quantity"
-              defaultValue={0}
-              value={productBody.quantity}
-              onChange={(e) =>
-                setProductBody({ ...productBody, quantity: e.target.value })
-              }
-              required
-            />
-          </p>
-          <p>
-            <label htmlFor="price">
-              <span>Price:</span>
-            </label>
-            <input
-              type="number"
-              id="price"
-              name="price"
-              defaultValue={0}
-              value={productBody.price}
-              onChange={(e) =>
-                setProductBody({ ...productBody, price: e.target.value })
-              }
-              required
             />
           </p>
         </section>
         <section>
           <p>
             <button type="submit" className="submitButton">
-              Add Product
+              Search Product
             </button>
           </p>
           <p>
-            <button className="backButton" onClick={(e) => showProductForm(e)}>
+            <button onClick={(e) => showProductForm(e)} className="backButton">
               Go Back
             </button>
           </p>
@@ -123,4 +91,4 @@ function AddProductForm() {
   );
 }
 
-export default AddProductForm;
+export default SearchProductForm;

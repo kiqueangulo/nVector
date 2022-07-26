@@ -1,21 +1,21 @@
 import React from "react";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { useLocationContext } from "../../context/LocationContext";
+import { locationsCall } from "../../api/locations";
 
 function AddLocationForm() {
+  const { locationBody, setLocationBody } = useLocationContext();
   const { displayLocationForm, setDisplayLocationForm, displayProductForm } =
     useGeneralContext();
-
-  const { locationBody, setLocationBody } = useLocationContext();
 
   const showLocationForm = (e) => {
     e.preventDefault();
     setDisplayLocationForm(!displayLocationForm);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    event.target.reset();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    locationsCall.createLocation(locationBody);
   };
 
   return (
@@ -40,10 +40,10 @@ function AddLocationForm() {
               id="section"
               name="sections"
               value={locationBody.sections}
-              onChange={(event) =>
+              onChange={(e) =>
                 setLocationBody({
                   ...locationBody,
-                  sections: event.target.value,
+                  sections: e.target.value,
                 })
               }
               required
@@ -53,13 +53,37 @@ function AddLocationForm() {
             <label htmlFor="shelf">
               <span>Shelf:</span>
             </label>
-            <input type="text" id="shelf" name="shelf_letter" required />
+            <input
+              type="text"
+              id="shelf"
+              name="shelf_letter"
+              value={locationBody.shelf_letter}
+              onChange={(e) =>
+                setLocationBody({
+                  ...locationBody,
+                  shelf_letter: e.target.value,
+                })
+              }
+              required
+            />
           </p>
           <p>
             <label htmlFor="division">
               <span>Division:</span>
             </label>
-            <input type="text" id="division" name="shelf_div" required />
+            <input
+              type="number"
+              id="division"
+              name="shelf_div"
+              value={locationBody.shelf_div}
+              onChange={(e) =>
+                setLocationBody({
+                  ...locationBody,
+                  shelf_div: e.target.value,
+                })
+              }
+              required
+            />
           </p>
         </section>
         <section>

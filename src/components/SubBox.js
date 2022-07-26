@@ -30,6 +30,7 @@ function SubBox(props) {
       </Collapsible>
     </li>
   ));
+
   return <div className="subBox">{displaySubSections}</div>;
 }
 

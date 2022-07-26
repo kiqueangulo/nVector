@@ -5,6 +5,7 @@ import { SidebarData } from "./components/Navbar/SidebarData.js";
 import Header from "./components/Header.js";
 import ScrollBar from "./components/ScrollBar/ScrollBar.js";
 import SectionBox from "./components/SectionBox.js";
+import ProductDetails from "./components/Details/ProductDetails.js";
 
 import "./App.css";
 
@@ -34,6 +35,11 @@ function App() {
               element={<SectionBox subSections={sectionsObj[section]} />}
             />
           ))}
+          <Route
+            exact
+            path="/search/products/:product_id"
+            element={<ProductDetails />}
+          />
         </Routes>
       </Router>
     </div>
