@@ -64,10 +64,14 @@ function AddLocationForm() {
         </section>
         <section>
           <p>
-            <button type="submit">Add Locations</button>
+            <button type="submit" className="submitButton">
+              Add Locations
+            </button>
           </p>
           <p>
-            <button onClick={(e) => showLocationForm(e)}>Go Back</button>
+            <button className="backButton" onClick={(e) => showLocationForm(e)}>
+              Go Back
+            </button>
           </p>
         </section>
       </form>

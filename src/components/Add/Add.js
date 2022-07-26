@@ -7,11 +7,15 @@ import "../Search/Search.css";
 
 function Add() {
   return (
-    <>
-      <h2>Add</h2>
-      <AddLocationForm />
-      <AddProductForm />
-    </>
+    <div className="bgBox">
+      <div className="container">
+        <div className="outline">
+          <h2>Add</h2>
+          <AddLocationForm />
+          <AddProductForm />
+        </div>
+      </div>
+    </div>
   );
 }
 

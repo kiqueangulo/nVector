@@ -1,11 +1,103 @@
+
 .hide-title {
     display: none;
 }
-
 .search-form {
     display: none;
 }
-
 .active-form {
     display: block;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.bgBox{
+    border-radius: 0px 40px 0px 40px;
+    position: relative;
+    background-color: #E8F9F7;
+    min-width: 90vw;
+    height: 60vh;
+    margin: auto;
+    top: 25vh;
+    /* border: 1px solid red; */
+    z-index:0;
+    padding-top:15%;
+    box-shadow: -8px -6px 15px -10px rgba(0, 0, 0, 0.498), inset -13px -14px 7px -4px rgba(255, 255, 255, 0.574);
+}   
+.container {
+    display: flex;
+    flex-direction: column;
+    border: .25em solid #E8F9F7;
+    border-radius: 0px 40px 0px 40px;
+    position: relative;
+    background-color: #fff;
+    color:#80BDB6;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    margin-bottom: .75em;
+    font-size: 1.5em;
+    box-shadow: -8px -6px 15px -10px rgba(0, 0, 0, 0.498);
+    text-align: center;
+    z-index:1;
+}
+.outline{
+    width: 100%;
+    border: .1em solid #868686a4;
+    border-radius: 0px 40px 0px 40px;
+    padding: .5em;
+}
+.container h2{
+    padding-top: .25em;
+    border-bottom: .1em solid #E8F9F7;
+    box-shadow: 0px 6px 20px -16px rgba(0,0,0,0.73); 
+    padding-bottom: .25em;
+    color: rgb(172, 227, 214);
+    
+}
+.container h3{
+    padding-top: .75em;
+    border-radius: 0px 40px 0px 40px;
+}
+.container h3:hover{
+    color: #868686;
+    border-bottom: .1em solid rgba(68, 152, 163, 0.334);
+    background: rgb(199,255,250);
+    background: linear-gradient(0deg, rgba(199, 255, 250, 0.45) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 6px 20px -16px rgba(0,0,0,0.73);
+    padding: .75em;
+}
+
+.submitButton{
+    background-color: #a9e2a8;
+    color: #fff;
+    border: none;
+    border-radius: 0px 10px 0px 10px;
+    text-align: center;
+    font-size: .75em;
+    margin: .5em;
+    padding: .2em;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: -1px -2px 10px -2px rgba(81, 187, 95, 0.19);
+}
+.submitButton:hover{
+    background-color: #69b95b;
+}
+.backButton{
+    width: auto;
+    background-color: #E9C1C1;
+    color: #fff;
+    border: none;
+    border-radius: 10px 0px 10px 0px;
+    text-align: center;
+    font-size: .5em;
+    padding: .2em;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.252);
+}
+.backButton:hover{
+    background-color: #b95b5b;
 }

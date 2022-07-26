@@ -68,10 +68,14 @@ function AddProductForm() {
         </section>
         <section>
           <p>
-            <button type="submit">Add Product</button>
+            <button type="submit" className="submitButton">
+              Add Product
+            </button>
           </p>
           <p>
-            <button onClick={(e) => showProductForm(e)}>Go Back</button>
+            <button className="backButton" onClick={(e) => showProductForm(e)}>
+              Go Back
+            </button>
           </p>
         </section>
       </form>
