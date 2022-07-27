@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useGeneralContext } from "../../context/GeneralContext";
 import { useProductContext } from "../../context/ProductContext";
 
 function ProductDetails() {
   const navigate = useNavigate();
+  const { exitDetails, setExitDetails } = useGeneralContext();
   const { productsCall, oneProduct, setOneProduct } = useProductContext();
   const { product_id } = useParams();
 
@@ -17,8 +19,9 @@ function ProductDetails() {
   }, []);
 
   const resetOnLeave = () => {
-    navigate(-1);
+    navigate(exitDetails);
     setOneProduct({});
+    setExitDetails(-1);
   };
 
   return (
@@ -41,6 +44,14 @@ function ProductDetails() {
           )}
         </div>
       </div>
+      <button
+        onClick={() => {
+          navigate(`/search/products/results/${oneProduct.product_id}/edit`);
+          setExitDetails(exitDetails - 1);
+        }}
+      >
+        Edit
+      </button>
     </div>
   );
 }
