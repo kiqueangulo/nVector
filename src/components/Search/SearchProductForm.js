@@ -14,7 +14,6 @@ function SearchProductForm() {
     setProductBody,
     initialState,
     productsCall,
-    foundProducts,
     setFoundProducts,
   } = useProductContext();
 
@@ -59,7 +58,6 @@ function SearchProductForm() {
               type="text"
               id="name"
               name="name"
-              defaultValue=""
               placeholder="All Products"
               value={productBody.name}
               onChange={(e) =>
@@ -75,7 +73,6 @@ function SearchProductForm() {
               type="text"
               id="brand"
               name="brand"
-              defaultValue=""
               placeholder="All Brands"
               value={productBody.brand}
               onChange={(e) =>

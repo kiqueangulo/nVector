@@ -1,27 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useProductContext } from "../../context/ProductContext";
 
 function FoundProducts() {
+  const navigate = useNavigate();
   const { foundProducts } = useProductContext();
-  console.log(foundProducts);
 
   return (
     <div className="bgBox">
+      <button onClick={() => navigate(-1)}>⬅</button>
       <div className="container">
         <div className="outline">
-          <div>FoundProducts</div>
+          <h3>FoundProducts</h3>
           <ul>
-            {foundProducts.map((product, index) => (
-              <li>
-                <Link
-                  key={index}
-                  to={`/search/products/results/${product.product_id}`}
-                >
-                  * {product.name}
-                </Link>
-              </li>
-            ))}
+            {foundProducts.length ? (
+              foundProducts.map((product, index) => (
+                <li key={index}>
+                  <Link to={`/search/products/results/${product.product_id}`}>
+                    * {product.name}
+                  </Link>
+                </li>
+              ))
+            ) : (
+              <p>No products found.</p>
+            )}
           </ul>
         </div>
       </div>
