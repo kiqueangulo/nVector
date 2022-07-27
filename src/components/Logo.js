@@ -10,7 +10,7 @@ function Logo() {
 	return (
 		<>
     	    <img src= {logoSrc} alt="nVentory Logo" style={logoStyle}/>
-		</>
+		</>    
 	)
 }
 
