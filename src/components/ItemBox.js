@@ -46,7 +46,7 @@ function ItemBox(props) {
             <button
               className="minusButton"
               onClick={() => {
-                count > 0
+                division.products.quantity > 0
                   ? setCount(division.products.quantity - 1)
                   : (division.products.quantity = 0);
               }}
@@ -57,8 +57,9 @@ function ItemBox(props) {
             <div className="quantInputForm scroll">
               <textarea
                 type="number"
+                git
                 className="quantTextBox"
-                value={division.products.quantity}
+                value={division.products.quantity + count}
                 // maxlength="4" size="4"
               />
             </div>
