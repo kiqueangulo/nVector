@@ -3,7 +3,7 @@ import axios from "axios";
 const PRODUCT_URL =
   "https://nventory-postgres-database.herokuapp.com/products/";
 
-const getAllProducts = (body) => axios.get(PRODUCT_URL, body);
+const getAllProducts = (body) => axios.get(PRODUCT_URL, { params: body });
 
 const createProduct = async (body) => {
   try {

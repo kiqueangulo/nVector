@@ -9,8 +9,14 @@ function SearchProductForm() {
   const { displayLocationForm, displayProductForm, setDisplayProductForm } =
     useGeneralContext();
 
-  const { productBody, setProductBody, initialState, productsCall } =
-    useProductContext();
+  const {
+    productBody,
+    setProductBody,
+    initialState,
+    productsCall,
+    foundProducts,
+    setFoundProducts,
+  } = useProductContext();
 
   const showProductForm = (e) => {
     e.preventDefault();
@@ -20,8 +26,12 @@ function SearchProductForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const foundProducts = await productsCall.getAllProducts(productBody);
+    const { data } = await productsCall.getAllProducts({
+      name: productBody.name,
+      brand: productBody.brand,
+    });
 
+    setFoundProducts(data);
     navigate(`/search/products/results`);
 
     setProductBody(initialState);

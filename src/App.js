@@ -5,6 +5,7 @@ import { SidebarData } from "./components/Navbar/SidebarData.js";
 import Header from "./components/Header.js";
 import ScrollBar from "./components/ScrollBar/ScrollBar.js";
 import SectionBox from "./components/SectionBox.js";
+import FoundProducts from "./components/Details/FoundProducts.js";
 import ProductDetails from "./components/Details/ProductDetails.js";
 
 import "./App.css";
@@ -24,6 +25,7 @@ function App() {
           {SidebarData?.map((route, index) => (
             <Route
               key={index}
+              excat
               path={route.path}
               element={route.component ?? route.component}
             />
@@ -37,6 +39,10 @@ function App() {
           ))}
           <Route
             exact
+            path="/search/products/results"
+            element={<FoundProducts />}
+          />
+          <Route
             path="/search/products/results/:product_id"
             element={<ProductDetails />}
           />

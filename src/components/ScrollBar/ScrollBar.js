@@ -7,6 +7,8 @@ import "./ScrollBar.css";
 function ScrollBar() {
   const { allLocations } = useLocationContext();
   const [sectionKeys] = allLocations;
+  console.log(allLocations);
+  console.log(sectionKeys);
 
   return (
     <div className="section-wrapper">
