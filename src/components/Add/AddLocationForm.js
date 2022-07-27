@@ -93,7 +93,7 @@ function AddLocationForm() {
             </button>
           </p>
           <p>
-            <button className="backButton" onClick={(e) => showLocationForm(e)}>
+            <button className="addBackButton" onClick={(e) => showLocationForm(e)}>
               Go Back
             </button>
           </p>

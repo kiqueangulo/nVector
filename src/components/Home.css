@@ -1,0 +1,98 @@
+
+.hide-title {
+    display: none;
+}
+.search-form {
+    display: none;
+}
+.active-form {
+    display: block;
+    border: none;
+    font-size: .75em;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.bgBox{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 40px 0px 40px;
+    position: relative;
+    background-color: #E8F9F7;
+    /* min-width: 90vw; */
+    /* height: 60vh; */
+    margin: auto;
+    /* top: 25vh; */
+    /* border: 1px solid red; */
+    z-index:0;
+    padding-top:10%;
+    box-shadow: -8px -6px 15px -10px rgba(0, 0, 0, 0.498), inset -13px -14px 7px -4px rgba(255, 255, 255, 0.574);
+    overflow: auto;
+}   
+.homeContainer {
+    /* display: flex; */
+    flex-direction: column;
+    border: .25em solid #E8F9F7;
+    border-radius: 0px 40px 0px 40px;
+    position: relative;
+    background-color: #fff;
+    color:#80BDB6;
+    /* width: 70vw;
+    min-width: 60vw; */
+    /* width:fit-content;
+    height:fit-content; */
+    /* height: auto; */
+    margin: auto;
+    display: flex;
+    margin-bottom: .75em;
+    font-size: 1.5em;
+    box-shadow: -8px -6px 15px -10px rgba(0, 0, 0, 0.498);
+    text-align: center;
+    z-index:1;
+    white-space: nowrap;
+    overflow: none;
+}
+.top{
+    width:fit-content;
+    height:fit-content;
+}
+.bottom{
+    width:fit-content;
+    height:fit-content;
+}
+.outline{
+    /* width: 100%; */
+    width:fit-content;
+    height:fit-content;
+    border: .1em solid #868686a4;
+    border-radius: 0px 40px 0px 40px;
+    padding: .5em;
+    
+}
+.homeContainer h1{
+    color: #c1c1c1;
+    white-space: normal;
+}
+.homeContainer h2{
+    padding-top: .25em;
+    /* border-bottom: .1em solid #E8F9F7; */
+    box-shadow: 0px 6px 20px -16px rgba(0,0,0,0.73); 
+    padding-bottom: .25em;
+    color: rgb(172, 227, 214);  
+    
+}
+.homeContainer h3{
+    padding-top: .75em;
+    border-radius: 0px 20px 0px 20px;
+}
+
+#CTA{
+    padding-top: .5em;
+}
+.homeLogo{
+    /* width:100%; */
+    /* height:fit-content; */
+    /* white-space: nowrap; */
+    /* overflow: none; */
+    /* background-color: brown; */
+}

@@ -113,7 +113,7 @@ function AddProductForm() {
             </button>
           </p>
           <p>
-            <button className="backButton" onClick={(e) => showProductForm(e)}>
+            <button className="addBackButton" onClick={(e) => showProductForm(e)}>
               Go Back
             </button>
           </p>
