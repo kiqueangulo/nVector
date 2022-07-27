@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function SaveButton() {
 	const buttonStyle = {
 		padding: '5px 13px',
@@ -13,7 +14,7 @@ function SaveButton() {
 
 	return (
 		<div>
-          <button style={buttonStyle}>Save</button>  
+          <button style={buttonStyle} className="saveButton">Save</button>  
 		</div>
 	);
 };
