@@ -25,6 +25,7 @@ function ProductDetails() {
 
   return (
     <div className="bgBox">
+      <div className="midFrame">
       <button onClick={resetOnLeave} className="backButton">⬅</button>
       <div className="container">
         <div className="outline">
@@ -42,6 +43,7 @@ function ProductDetails() {
             </p>
           )}
         </div>
+      </div>
       </div>
     </div>
   );

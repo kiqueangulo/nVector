@@ -17,9 +17,10 @@ function FoundProducts() {
           <ul>
             {foundProducts.length ? (
               foundProducts.map((product, index) => (
-                <li key={index}>
+                <li key={index} className="itemLink">
+                  <div className="checkmark">✓</div>
                   <Link to={`/search/products/results/${product.product_id}`}>
-                    +{product.name}
+                   {product.name}
                   </Link>
                 </li>
               ))

@@ -16,7 +16,7 @@ function Home() {
         <div className="homeContainer bottom">
             <div className="outline">
                 <h2 id="welcome">Welcome!</h2>
-                <h1 id="CTA"> Select Your Section! </h1>
+                <h1 id="CTA"> Select your section above! </h1>
             </div>
         </div>
     </div>
