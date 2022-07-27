@@ -16,8 +16,8 @@ function ItemBox(props) {
     navigate(`/action/${product.product_id}`);
   };
 
-  const displayItems = shelf_divs.map((division, index) =>
-    division.products !== null ? (
+  const displayItems = shelf_divs.map((division, index) => {
+    return division.products !== null ? (
       <li key={index}>
         <div className="itemBox">
           <div className="infoButtonCover"></div>
@@ -84,8 +84,8 @@ function ItemBox(props) {
           </div>
         </div>
       </li>
-    ) : null
-  );
+    ) : null;
+  });
 
   return <div>{displayItems}</div>;
 }
