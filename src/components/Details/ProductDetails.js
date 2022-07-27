@@ -54,10 +54,11 @@ function ProductDetails() {
             navigate(`/search/products/results/${oneProduct.product_id}/edit`);
             setExitDetails(exitDetails - 1);
           }}
-        >
+        className="infoEditButton">
           Edit
         </button>
       </div>
+      
     </div>
   );
 }
