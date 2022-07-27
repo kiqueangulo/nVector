@@ -7,6 +7,7 @@ import ScrollBar from "./components/ScrollBar/ScrollBar.js";
 import SectionBox from "./components/SectionBox.js";
 import FoundProducts from "./components/Details/FoundProducts.js";
 import ProductDetails from "./components/Details/ProductDetails.js";
+import EditProduct from "./components/EditProduct.js";
 
 import "./App.css";
 
@@ -43,8 +44,14 @@ function App() {
             element={<FoundProducts />}
           />
           <Route
+            exact
             path="/search/products/results/:product_id"
             element={<ProductDetails />}
+          />
+          <Route
+            exact
+            path="/search/products/results/:product_id/edit"
+            element={<EditProduct />}
           />
         </Routes>
       </Router>

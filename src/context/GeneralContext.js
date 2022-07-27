@@ -11,6 +11,7 @@ export default function GeneralContextProvider({ children }) {
   const [showScrollbar, setShowScrollBar] = useState(false);
   const [displayLocationForm, setDisplayLocationForm] = useState(false);
   const [displayProductForm, setDisplayProductForm] = useState(false);
+  const [exitDetails, setExitDetails] = useState(-1);
 
   return (
     <GeneralContext.Provider
@@ -23,6 +24,8 @@ export default function GeneralContextProvider({ children }) {
         setDisplayLocationForm,
         displayProductForm: displayProductForm,
         setDisplayProductForm,
+        exitDetails: exitDetails,
+        setExitDetails,
       }}
     >
       {children}

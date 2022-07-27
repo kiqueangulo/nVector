@@ -25,7 +25,14 @@ const getOneProduct = async (id) => {
   }
 };
 
-const updateProduct = (id) => axios.put(`${PRODUCT_URL}/${id}`);
+const updateProduct = async (id, body) => {
+  try {
+    await axios.put(`${PRODUCT_URL}/${id}`, body);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const deleteProduct = (id) => axios.delete(`${PRODUCT_URL}/${id}`);
 
 export const productsCall = {
