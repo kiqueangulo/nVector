@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useProductContext } from "../../context/ProductContext";
 
 function FoundProducts() {
+  const navigate = useNavigate();
   const { foundProducts } = useProductContext();
 
   return (
     <div className="bgBox">
+      <button onClick={() => navigate(-1)}>⬅</button>
       <div className="container">
         <div className="outline">
           <h3>FoundProducts</h3>

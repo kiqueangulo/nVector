@@ -1,17 +1,29 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useProductContext } from "../../context/ProductContext";
 
 function ProductDetails() {
+  const navigate = useNavigate();
   const { productsCall, oneProduct, setOneProduct } = useProductContext();
   const { product_id } = useParams();
 
-  productsCall
-    .getOneProduct(Number(product_id))
-    .then((product) => setOneProduct(product));
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const data = await productsCall.getOneProduct(product_id);
+      setOneProduct(data);
+    };
+
+    setTimeout(fetchProduct, 250);
+  }, []);
+
+  const resetOnLeave = () => {
+    navigate(-1);
+    setOneProduct({});
+  };
 
   return (
     <div className="bgBox">
+      <button onClick={resetOnLeave}>⬅</button>
       <div className="container">
         <div className="outline">
           {!oneProduct.name ? (
