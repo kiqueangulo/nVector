@@ -57,9 +57,8 @@ function ItemBox(props) {
             <div className="quantInputForm scroll">
               <textarea
                 type="number"
-                git
                 className="quantTextBox"
-                value={division.products.quantity + count}
+                value={division.products.quantity}
                 // maxlength="4" size="4"
               />
             </div>

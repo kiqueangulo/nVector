@@ -20,7 +20,7 @@
     top: 0;
     z-index: 90;
     left: -200%;
-    border-radius: 25px 25px;
+    border-radius: 0px 25px  25px 0px;
     border: .1em solid #868686;
     transition: ease-in-out 750ms;
 }
