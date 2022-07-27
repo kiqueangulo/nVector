@@ -18,6 +18,7 @@ function EditProduct() {
 
   return (
     <div className="bgBox">
+      <div className="midFrame">
       <div className="container">
         <div className="outline">
           <div className="form-title">
@@ -97,12 +98,13 @@ function EditProduct() {
                 </button>
               </p>
               <p>
-                <button className="backButton" onClick={() => navigate(-1)}>
+                <button className="addBackButton" onClick={() => navigate(-1)}>
                   Go Back
                 </button>
               </p>
             </section>
           </form>
+        </div>
         </div>
       </div>
     </div>

@@ -162,6 +162,7 @@ textarea{
     border: none;
     resize: none;
     min-width: 5ch;
+    text-align: center;
     
 }
 .scroll::-webkit-scrollbar {
