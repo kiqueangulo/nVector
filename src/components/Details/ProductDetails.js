@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { useProductContext } from "../../context/ProductContext";
 
+import "./Products.css";
+
 function ProductDetails() {
   const navigate = useNavigate();
   const { exitDetails, setExitDetails } = useGeneralContext();
@@ -26,32 +28,36 @@ function ProductDetails() {
 
   return (
     <div className="bgBox">
-      <button onClick={resetOnLeave}>⬅</button>
-      <div className="container">
-        <div className="outline">
-          {!oneProduct.name ? (
-            <h2>...Loading</h2>
-          ) : (
-            <p>
-              Name: {oneProduct.name}
-              <br />
-              Brand: {oneProduct.brand}
-              <br />
-              Quantity: {oneProduct.quantity}
-              <br />
-              Price: {oneProduct.price}
-            </p>
-          )}
+      <div className="midFrame">
+        <button onClick={resetOnLeave} className="backButton">
+          ⬅
+        </button>
+        <div className="container">
+          <div className="outline">
+            {!oneProduct.name ? (
+              <h2>...Loading</h2>
+            ) : (
+              <p>
+                Name: {oneProduct.name}
+                <br />
+                Brand: {oneProduct.brand}
+                <br />
+                Quantity: {oneProduct.quantity}
+                <br />
+                Price: {oneProduct.price}
+              </p>
+            )}
+          </div>
         </div>
+        <button
+          onClick={() => {
+            navigate(`/search/products/results/${oneProduct.product_id}/edit`);
+            setExitDetails(exitDetails - 1);
+          }}
+        >
+          Edit
+        </button>
       </div>
-      <button
-        onClick={() => {
-          navigate(`/search/products/results/${oneProduct.product_id}/edit`);
-          setExitDetails(exitDetails - 1);
-        }}
-      >
-        Edit
-      </button>
     </div>
   );
 }

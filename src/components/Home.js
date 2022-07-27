@@ -1,24 +1,22 @@
 import React from "react";
 
 import Logo from '../components/Logo'
-import "./Search/Search.css";
+import "./Home.css";
 function Home() {
-    const logoStyle ={
-        width: "25px",
-        height: "auto"
-    }
  
   return (
     <div className="bgBox">
-      <div className="container">
+      <div className="homeContainer top">
         <div className="outline">
-          <Logo/>
+          {/* <div className="homeLogo"> */}
+            <Logo />
+          {/* </div> */}
         </div>
         </div>
-        <div className="container">
+        <div className="homeContainer bottom">
             <div className="outline">
                 <h2 id="welcome">Welcome!</h2>
-                <h1 id="CTA"> Select Your Section! </h1>
+                <h1 id="CTA"> Select your section above! </h1>
             </div>
         </div>
     </div>

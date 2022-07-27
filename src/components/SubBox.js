@@ -19,7 +19,7 @@ function SubBox(props) {
             Shelf {shelfKey} ------------
           </button>
         }
-        lazyRender="false"
+        lazyRender=""
         className=""
       >
         <div className="content">
