@@ -27,8 +27,7 @@ const getOneProduct = async (id) => {
 
 const updateProduct = async (id, body) => {
   try {
-    const { data } = await axios.put(`${PRODUCT_URL}/${id}`, body);
-    console.log(data);
+    await axios.put(`${PRODUCT_URL}/${id}`, body);
   } catch (err) {
     console.log(err);
   }

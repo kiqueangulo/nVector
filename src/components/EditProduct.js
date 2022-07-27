@@ -1,9 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useGeneralContext } from "../context/GeneralContext";
 import { useProductContext } from "../context/ProductContext";
 
 function EditProduct() {
   const navigate = useNavigate();
+  const { exitDetails, setExitDetails } = useGeneralContext();
   const { productsCall, oneProduct, setOneProduct } = useProductContext();
 
   const handleSubmit = async (e) => {
@@ -86,7 +88,11 @@ function EditProduct() {
             </section>
             <section>
               <p>
-                <button type="submit" className="submitButton">
+                <button
+                  type="submit"
+                  className="submitButton"
+                  onClick={() => setExitDetails(exitDetails - 1)}
+                >
                   Update Product
                 </button>
               </p>
