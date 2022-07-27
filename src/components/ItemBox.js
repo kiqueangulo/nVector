@@ -6,18 +6,17 @@ import "./ItemBox.css";
 
 function ItemBox(props) {
   const navigate = useNavigate();
-  const { productsCall } = useProductContext();
+  const { setOneProduct } = useProductContext();
   const shelf_divs = props.items;
 
   let [count, setCount] = useState(0);
 
-  const removeProduct = async (id) => {
-    const deletedProduct = await productsCall.deleteProduct(id);
-    console.log(deletedProduct);
+  const checkDelete = (product) => {
+    setOneProduct(product);
+    navigate(`/action/${product.product_id}`);
   };
 
   const displayItems = shelf_divs.map((division, index) => (
-   
     <li key={index}>
       <div className="itemBox">
         <div className="infoButtonCover"></div>
@@ -36,7 +35,7 @@ function ItemBox(props) {
         </button>
         <div className="textAreaStyling">
           <textarea
-            class="scrollableTextBox"
+            className="scrollableTextBox"
             name="itemName"
             value={`${division.shelf_div} - ${division.products.name}`}
           ></textarea>
@@ -58,8 +57,9 @@ function ItemBox(props) {
             <div className="quantInputForm scroll">
               <textarea
                 type="number"
-                class="quantTextBox"
-                value={division.products.quantity+count}
+                git
+                className="quantTextBox"
+                value={division.products.quantity + count}
                 // maxlength="4" size="4"
               />
             </div>
@@ -78,10 +78,7 @@ function ItemBox(props) {
         </div>
 
         <div className="removeDiv">
-          <button
-            className="remove"
-            onClick={() => removeProduct(division.product_id)}
-          >
+          <button className="remove" onClick={() => checkDelete(division)}>
             remove
           </button>
         </div>

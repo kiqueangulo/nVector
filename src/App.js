@@ -8,6 +8,7 @@ import SectionBox from "./components/SectionBox.js";
 import FoundProducts from "./components/Details/FoundProducts.js";
 import ProductDetails from "./components/Details/ProductDetails.js";
 import EditProduct from "./components/EditProduct.js";
+import Delete from "./components/Delete.js";
 
 import "./App.css";
 
@@ -53,6 +54,7 @@ function App() {
             path="/search/products/results/:product_id/edit"
             element={<EditProduct />}
           />
+          <Route path="/action/:product_id" element={<Delete />} />
         </Routes>
       </Router>
     </div>
