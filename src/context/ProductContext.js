@@ -18,6 +18,7 @@ export function useProductContext() {
 export default function ProductProvider({ children }) {
   const [allProducts] = useAllProducts();
   const [productBody, setProductBody] = useState(initialState);
+  const [foundProducts, setFoundProducts] = useState([]);
   const [oneProduct, setOneProduct] = useState({});
 
   return (
@@ -28,6 +29,8 @@ export default function ProductProvider({ children }) {
         allProducts: allProducts,
         productBody: productBody,
         setProductBody,
+        foundProducts: foundProducts,
+        setFoundProducts,
         oneProduct: oneProduct,
         setOneProduct,
       }}

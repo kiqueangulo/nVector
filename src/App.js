@@ -5,6 +5,7 @@ import { SidebarData } from "./components/Navbar/SidebarData.js";
 import Header from "./components/Header.js";
 import ScrollBar from "./components/ScrollBar/ScrollBar.js";
 import SectionBox from "./components/SectionBox.js";
+import FoundProducts from "./components/Details/FoundProducts.js";
 import ProductDetails from "./components/Details/ProductDetails.js";
 
 import "./App.css";
@@ -32,13 +33,16 @@ function App() {
           {sectionKeys?.map((section, index) => (
             <Route
               key={index}
-              exact
               path={`/${section}`}
               element={<SectionBox subSections={sectionsObj[section]} />}
             />
           ))}
           <Route
             exact
+            path="/search/products/results"
+            element={<FoundProducts />}
+          />
+          <Route
             path="/search/products/results/:product_id"
             element={<ProductDetails />}
           />
