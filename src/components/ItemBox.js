@@ -17,6 +17,7 @@ function ItemBox(props) {
   };
 
   const displayItems = shelf_divs.map((division, index) => (
+   
     <li key={index}>
       <div className="itemBox">
         <div className="infoButtonCover"></div>
@@ -46,7 +47,7 @@ function ItemBox(props) {
             <button
               className="minusButton"
               onClick={() => {
-                count > 0
+                division.products.quantity > 0
                   ? setCount(division.products.quantity - 1)
                   : (division.products.quantity = 0);
               }}
@@ -58,7 +59,7 @@ function ItemBox(props) {
               <textarea
                 type="number"
                 class="quantTextBox"
-                value={division.products.quantity}
+                value={division.products.quantity+count}
                 // maxlength="4" size="4"
               />
             </div>
