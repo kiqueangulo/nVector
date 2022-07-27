@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { locationsCall } from "../api/locations.js";
 import { useLocation } from "../hooks/locations.js";
 
 const LocationContext = createContext();
@@ -18,6 +19,7 @@ export default function LocationProvider({ children }) {
   return (
     <LocationContext.Provider
       value={{
+        locationsCall: locationsCall,
         allLocations: allLocations,
         locationBody: locationBody,
         setLocationBody,
