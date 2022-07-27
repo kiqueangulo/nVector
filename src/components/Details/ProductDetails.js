@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProductContext } from "../../context/ProductContext";
 
+import './Products.css' 
+
 function ProductDetails() {
   const navigate = useNavigate();
   const { productsCall, oneProduct, setOneProduct } = useProductContext();
@@ -23,7 +25,7 @@ function ProductDetails() {
 
   return (
     <div className="bgBox">
-      <button onClick={resetOnLeave}>⬅</button>
+      <button onClick={resetOnLeave} className="backButton">⬅</button>
       <div className="container">
         <div className="outline">
           {!oneProduct.name ? (

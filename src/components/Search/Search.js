@@ -8,8 +8,8 @@ import "./Search.css";
 function Search() {
   return (
     <div className="bgBox">
-      <div className="container">
-        <div className="outline">
+      <div className="searchContainer">
+        <div className="searcOutline">
           <h2>Search</h2>
           <SearchLocationForm />
           <SearchProductForm />

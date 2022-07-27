@@ -30,7 +30,7 @@ function ItemBox(props) {
           <textarea
             class="scrollableTextBox"
             name="itemName"
-            defaultValue={`${division.shelf_div} - ${division.products.name}`}
+            value={`${division.shelf_div} - ${division.products.name}`}
           ></textarea>
         </div>
 
