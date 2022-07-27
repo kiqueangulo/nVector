@@ -59,7 +59,7 @@ function ItemBox(props) {
               <textarea
                 type="number"
                 class="quantTextBox"
-                value={division.products.quantity+count}
+                value={division.products.quantity}
                 // maxlength="4" size="4"
               />
             </div>
