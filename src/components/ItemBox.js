@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useProductContext } from "../context/ProductContext";
 
 import "./ItemBox.css";
 
 function ItemBox(props) {
   const navigate = useNavigate();
+  const { productsCall } = useProductContext();
   const shelf_divs = props.items;
 
   let [count, setCount] = useState(0);
+
+  const removeProduct = async (id) => {
+    const deletedProduct = await productsCall.deleteProduct(id);
+    console.log(deletedProduct);
+  };
 
   const displayItems = shelf_divs.map((division, index) => (
     <li key={index}>
@@ -39,7 +46,9 @@ function ItemBox(props) {
             <button
               className="minusButton"
               onClick={() => {
-                count > 0 ? setCount(division.products.quantity - 1) : (division.products.quantity  = 0);
+                count > 0
+                  ? setCount(division.products.quantity - 1)
+                  : (division.products.quantity = 0);
               }}
             >
               -
@@ -49,12 +58,15 @@ function ItemBox(props) {
               <textarea
                 type="number"
                 class="quantTextBox"
-                value={division.products.quantity }
+                value={division.products.quantity}
                 // maxlength="4" size="4"
               />
             </div>
 
-            <button className="plusButton" onClick={() => setCount(division.products.quantity  + 1)}>
+            <button
+              className="plusButton"
+              onClick={() => setCount(division.products.quantity + 1)}
+            >
               +
             </button>
           </div>
@@ -65,7 +77,12 @@ function ItemBox(props) {
         </div>
 
         <div className="removeDiv">
-          <button className="remove">remove</button>
+          <button
+            className="remove"
+            onClick={() => removeProduct(division.product_id)}
+          >
+            remove
+          </button>
         </div>
       </div>
     </li>
