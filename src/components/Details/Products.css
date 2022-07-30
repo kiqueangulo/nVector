@@ -2,14 +2,16 @@
     /* display: flex; */
 
     position: relative;
-    height: 100%;
+    /* height: 100%; */
+    padding-bottom: 15vh;
     overflow: auto;
-    top: 15vh
+    top: 10vh;
 }
 .midFrame{
     display: flex;
     flex-direction: row;
     position: relative;
+    align-items: center;
     /* height: auto; */
 } 
 .backButton {
@@ -22,7 +24,7 @@
     background-color: #f68181;
     color: #fff;
     border: none;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 10px 10px 0px;
     text-align: center;
     font-size: 1.5em;
     padding: .2em;
@@ -32,29 +34,31 @@
     box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.252);
 }
 .infoEditButton {
-    transform: rotate(-90deg);
-    width: 5em;
-    height: 1.75em;
+    width: 1.75em;
+    height: 5em;
     top: 50%;
     /* margin: auto; */
-    right:-5em;
+    /* right:-5em; */
     /* position: fixed; */
     background-color: #8edf7c;
-    color: #fff;
+   
     border: none;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 0px 0px 10px;
     text-align: center;
     font-size: 1.5em;
     padding: .2em;
     /* margin-top: 15%; */
     transition: all 0.2s ease;
     cursor: pointer;
-    box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.252);
-    
-
-    
+    box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.252); 
 }
-
+.verticle {
+    transform: rotate(-90deg);
+    color: #fff;
+}
+.infoEditButton:hover {
+    background-color: #55b63f;
+}
 /* .homeLogo {
     width: 80%;
 }*/

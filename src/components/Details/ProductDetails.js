@@ -55,7 +55,7 @@ function ProductDetails() {
             setExitDetails(exitDetails - 1);
           }}
         className="infoEditButton">
-          Edit
+        <div className="verticle">Edit</div> 
         </button>
       </div>
       
