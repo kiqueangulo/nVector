@@ -6,7 +6,7 @@ import "./ItemBox.css";
 
 function ItemBox(props) {
   const navigate = useNavigate();
-  const { setOneProduct } = useProductContext();
+  const { productsCall, oneProduct, setOneProduct } = useProductContext();
   const shelf_divs = props.items;
 
   let [count, setCount] = useState(0);
@@ -17,7 +17,9 @@ function ItemBox(props) {
   };
 
   const displayItems = shelf_divs.map((division, index) => {
+      // division.products !== null ?setCount(division.products.quantity): setCount(0);
     return division.products !== null ? (
+      
       <li key={index}>
         <div className="itemBox">
           <div className="infoButtonCover"></div>
@@ -48,8 +50,8 @@ function ItemBox(props) {
                 className="minusButton"
                 onClick={() => {
                   division.products.quantity > 0
-                    ? setCount(division.products.quantity - 1)
-                    : (division.products.quantity = 0);
+                    ? setCount(division.products.quantity--)
+                    : (count = 0);
                 }}
               >
                 -
@@ -60,20 +62,24 @@ function ItemBox(props) {
                   type="number"
                   className="quantTextBox"
                   value={division.products.quantity}
+                  // value={division.products.quantity}
                   // maxlength="4" size="4"
                 />
               </div>
 
               <button
                 className="plusButton"
-                onClick={() => setCount(division.products.quantity + 1)}
+                onClick={() => setCount(division.products.quantity++)}
               >
                 +
               </button>
             </div>
 
             <div className="lowerQuant">
-              <button className="submitQuant">submit</button>
+              <button className="submitQuant" // onClick=() => 
+                // setOneProduct(division.products,count)}
+                
+                >submit</button>
             </div>
           </div>
 
