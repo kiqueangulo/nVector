@@ -79,6 +79,7 @@ function EditProduct() {
                   type="number"
                   id="price"
                   name="price"
+                  step=".01"
                   defaultValue={oneProduct.price}
                   onChange={(e) =>
                     setOneProduct({ ...oneProduct, price: e.target.value })
