@@ -40,7 +40,6 @@ li {
 .infoButtonCover{
     position: absolute;
     border-radius: 70% ;
-    /* padding: .5em; */
     background-color: #fff;
     border: 2px dotted #020807;
     height: 1.5em;
@@ -51,20 +50,12 @@ li {
     top: 4px;
     left: 2px;
     z-index: 3;
-    /* display: none; */
 }
 
 .infoButton:active{
-    /* background-color: #E8F9F7; */
     border: .15em solid #80BDB6;
 }
-/* .itemQuantBox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
-} */
+
 .itemName{
     display: inline-flex;
     /* width: 20%; */
