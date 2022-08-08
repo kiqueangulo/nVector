@@ -1,6 +1,6 @@
 # nVentory-Frontend
 
-The nVentory application was thought of by AJ Phoenix while working at a Shopify-based brick and mortar wine store which. The slow and sometimes distracted process of organizng the space availible inspired AJ to build a cleaner and easier system for tracking inventory.
+The nVentory application was thought of by AJ Phoenix while working at a Shopify-based brick and mortar wine store. The slow and sometimes distracted process of organizing the space available inspired AJ to build a cleaner and easier system for tracking inventory.
 
 ## Link to back-end nVentory project
 
